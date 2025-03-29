@@ -43,7 +43,7 @@ def test_rate_limiter():
     limiter = SlidingWindowRateLimiter(window_size=10, max_requests=1)
 
     # Симулюємо потік повідомлень від користувачів (послідовні ID від 1 до 20)
-    print("\\n=== Симуляція потоку повідомлень ===")
+    print("\n=== Симуляція потоку повідомлень ===")
     for message_id in range(1, 11):
         # Симулюємо різних користувачів (ID від 1 до 5)
         user_id = message_id % 5 + 1
@@ -59,10 +59,10 @@ def test_rate_limiter():
         time.sleep(random.uniform(0.1, 1.0))
 
     # Чекаємо, поки вікно очиститься
-    print("\\nОчікуємо 4 секунди...")
+    print("\nОчікуємо 4 секунди...")
     time.sleep(4)
 
-    print("\\n=== Нова серія повідомлень після очікування ===")
+    print("\n=== Нова серія повідомлень після очікування ===")
     for message_id in range(11, 21):
         user_id = message_id % 5 + 1
         result = limiter.record_message(str(user_id))
