@@ -1,2 +1,8 @@
-# goit-algo2-hw-08
-Algorithms 2 Homework 8
+# Algorithms 2 Homework 8
+
+### Task 1
+Використання алгоритму Sliding Window для 
+реалізації механізму Rate Limiter для обмеження 
+частоти повідомлень від користувачів для 
+запобігання спаму у чат-системі.
+
